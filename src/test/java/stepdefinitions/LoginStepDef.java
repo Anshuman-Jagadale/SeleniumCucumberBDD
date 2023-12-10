@@ -1,13 +1,14 @@
-package core;
+package stepdefinitions;
 
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import pages.LoginBase;
 import pages.LoginPage;
 
-public class Test extends TestBase {
+public class LoginStepDef extends LoginBase {
 
     @Given("I am on the OpenCart login page")
     public void i_am_on_the_open_cart_login_page() {

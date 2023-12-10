@@ -1,4 +1,4 @@
-package runner.browser_manager;
+package utils.browser_manager;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 

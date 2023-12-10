@@ -9,14 +9,12 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/java/features",
-        glue = {"core"},
-        plugin = {"json:test/report/cucumber_report.json"}
-        , tags = "@FunctionalTest"
+        glue = {"utils","stepdefinitions"},
+        plugin = { "pretty", "html:target/cucumber-reports/report.html"},
+        monochrome = true,
+        tags = "@FunctionalTest"
 )
-
-
 public class TestRunner {
-
     //Initialize report generator
     @AfterClass
     public static void initReport() {
@@ -25,14 +23,9 @@ public class TestRunner {
             System.out.println("Generating report");
             String[] cmd = {"cmd.exe", "/c", "npm run report"};
             Runtime.getRuntime().exec(cmd);
-            System.out.println("Report generated sucesfully");
-
-
+            System.out.println("Report generated successfully");
         } catch (Exception ex) {
-
             ex.printStackTrace();
-
         }
-
     }
 }

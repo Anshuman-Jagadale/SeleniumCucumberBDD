@@ -1,10 +1,9 @@
-package core;
+package pages;
 
-import core.Hooks;
+import utils.Hooks;
 import org.openqa.selenium.WebDriver;
-import pages.LoginPage;
 
-public class TestBase {
+public class LoginBase {
     protected WebDriver driver = Hooks.GetDriver();
     protected LoginPage loginPage;
 }
