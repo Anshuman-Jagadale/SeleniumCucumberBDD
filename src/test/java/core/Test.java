@@ -1,4 +1,4 @@
-package StepDefinitions;
+package core;
 
 
 import io.cucumber.java.en.Given;
@@ -6,7 +6,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.LoginPage;
-import core.TestBase;
 
 public class Test extends TestBase {
 
@@ -36,7 +35,6 @@ public class Test extends TestBase {
 
     @Then("I should be logged in successfully")
     public void i_should_be_logged_in_successfully() {
-
         Assert.assertTrue(loginPage.checkLogoutLink());
     }
 

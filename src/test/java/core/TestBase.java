@@ -1,5 +1,6 @@
 package core;
 
+import core.Hooks;
 import org.openqa.selenium.WebDriver;
 import pages.LoginPage;
 
