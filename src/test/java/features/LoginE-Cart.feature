@@ -1,4 +1,4 @@
-@FunctionalTest @UI
+@LoginE-Cart @UI
 Feature: Login Functionality for OpenCart E-commerce Website
 
   As a user of the OpenCart website

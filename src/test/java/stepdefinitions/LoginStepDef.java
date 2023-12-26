@@ -5,16 +5,15 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import pages.LoginBase;
+import pages.PagesBase;
 import pages.LoginPage;
 
-public class LoginStepDef extends LoginBase {
+public class LoginStepDef extends PagesBase {
 
     @Given("I am on the OpenCart login page")
     public void i_am_on_the_open_cart_login_page() {
         driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
         loginPage = new LoginPage(driver);
-
     }
 
     @Given("I have entered a valid username and password")

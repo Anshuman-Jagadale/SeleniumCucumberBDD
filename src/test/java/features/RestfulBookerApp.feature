@@ -1,4 +1,4 @@
-@Non-UI
+@API @Non-UI
 Feature: Validating Create Booking API
 
   Background:
