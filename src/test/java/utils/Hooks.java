@@ -15,8 +15,8 @@ public class Hooks {
     private DriverManager driverManager;
     private static int numberOfCase = 0;
 
-    @Before
-    public void Initialize() {
+   @Before("@UI")
+    public void InitializeUI() {
         numberOfCase++;
         System.out.println("Start of Test Scenario : " + numberOfCase);
         driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
@@ -25,10 +25,21 @@ public class Hooks {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    @After
+    @Before("@Non-UI")
+    public void InitializeNonUI() {
+        numberOfCase++;
+        System.out.println("Start of Test Scenario : " + numberOfCase);
+    }
+
+    @After("@UI")
     public void TearDown() {
         System.out.println("Test Scenario : " + numberOfCase + " Finished");
         driverManager.QuitDriver();
+    }
+
+    @After("@Non-UI")
+    public void TearDownNonUI() {
+        System.out.println("Test Scenario : " + numberOfCase + " Finished");
     }
 
     public static WebDriver GetDriver() {

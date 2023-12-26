@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         glue = {"utils","stepdefinitions"},
         plugin = { "pretty", "html:target/cucumber-reports/report.html"},
         monochrome = true,
-        tags = "@FunctionalTest"
+        tags = "@Non-UI"
 )
 public class TestRunner {
     //Initialize report generator
